@@ -1,4 +1,13 @@
-<?php $status = 'Online'; ?>
+<?php
+// COMPOSER
+require __DIR__ . '/vendor/autoload.php';
+
+// DATA E HORA
+$status = 'Online';
+$data = date_default_timezone_set('America/Sao_Paulo');
+$data = date("d-m-Y H:i:s");
+
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -20,7 +29,7 @@
             <h4 class="alert-heading"><?= $status ?></h4>
             <p>Aplicação está ativa</p>
             <hr>
-            <p class="mb-0"><?= date("d-m-Y H:i:s") ?></p>
+            <p class="mb-0"><?= $data ?></p>
         </div>
     </div>
 
