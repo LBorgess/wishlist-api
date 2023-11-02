@@ -5,10 +5,15 @@ namespace App\Entity;
 use App\Database\Database;
 use \PDO;
 
+/**
+ * Classe responsável por realizar as operações com o banco de dados
+ * realizando as manipulações necessárias com os valores
+ * @author LBorgess
+ */
 class Wishlist
 {
     /**
-     * Número deregistro do pedido na lista
+     * Número do registro do pedido na lista
      * @var integer
      */
     public $id;
