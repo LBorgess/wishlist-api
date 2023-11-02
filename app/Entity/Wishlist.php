@@ -79,5 +79,6 @@ class Wishlist
      */
     public function excluir()
     {
+        return (new Database('wishlist'))->delete('id = ' . $this->id);
     }
 }
