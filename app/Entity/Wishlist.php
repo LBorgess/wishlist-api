@@ -81,4 +81,19 @@ class Wishlist
     {
         return (new Database('wishlist'))->delete('id = ' . $this->id);
     }
+
+    /**
+     * Método responsável por obter todas os produtos do banco de dados
+     * @param string $where
+     * @param string $order
+     * @param string $limit
+     * @return array
+     */
+    public static function getProdutos($where = null, $order = null, $limit = null)
+    {
+        return (new Database('wishlist'))->select($where, $order, $limit)
+            ->fetchAll(PDO::FETCH_CLASS, self::class);
+    }
+
+    
 }
