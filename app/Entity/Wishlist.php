@@ -44,6 +44,16 @@ class Wishlist
      */
     public function cadastrar()
     {
+        $obDatabase = new Database('wishlist');
+
+        $this->id = $obDatabase->insert([
+            'produto'   => $this->produto,
+            'link'      => $this->link,
+            'preco'     => $this->preco,
+            'categoria' => $this->categoria
+        ]);
+
+        return true;
     }
 
     /**
