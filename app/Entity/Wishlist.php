@@ -64,6 +64,12 @@ class Wishlist
      */
     public function atualizar()
     {
+        return (new Database('wishlist'))->update('id = ' . $this->id, [
+            'produto'   => $this->produto,
+            'link'      => $this->link,
+            'preco'     => $this->preco,
+            'categoria' => $this->categoria
+        ]);
     }
 
     /**
