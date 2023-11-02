@@ -95,5 +95,14 @@ class Wishlist
             ->fetchAll(PDO::FETCH_CLASS, self::class);
     }
 
-    
+    /**
+     * Método responsável por realizar a busca de uma lista com base em seu ID
+     * @param integer $id
+     * @return Wishlist
+     */
+    public static function getProduto($id)
+    {
+        return (new Database('wishlist'))->select('id = ' . $id)
+            ->fetchObject(self::class);
+    }
 }
