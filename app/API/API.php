@@ -3,6 +3,7 @@
 namespace App\API;
 
 use App\Database\Database;
+use App\Entity\Wishlist;
 
 /**
  * Classe responsável por realizar as operações da API
@@ -51,5 +52,26 @@ class API
 
             die;
         }
+    }
+
+    public function apicall()
+    {
+    }
+    public function post()
+    {
+    }
+    public function put()
+    {
+    }
+    public function delete()
+    {
+    }
+
+    public function get()
+    {
+        $obWishlist = new Wishlist();
+        $response['error'] = false;
+        $response['message'] = "Pedido executado com sucesso";
+        $response['wishlist'] = $obWishlist->getProdutos();
     }
 }
