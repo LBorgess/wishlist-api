@@ -28,6 +28,28 @@ class API
      */
     public $missing = '';
 
-    
+    /**
+     * Método responsável por verificar se todos os parâmetros estão
+     * disponíveis
+     * @param array $parameters
+     * @return array
+     */
+    public function verify($parameters)
+    {
+        foreach ($parameters as $parameter) {
+            if (!isset($_POST[$parameter]) || strlen($_POST[$parameter] <= 0)) {
+                $available = false;
+                $this->missing = $this->missing . ", " . $parameter;
+            }
+        }
 
+        if (!$available) {
+            $response['error'] = true;
+            $response['message'] = "Parameters " . substr($this->missing, 1, strlen($this->missing)) . " missing";
+
+            echo json_encode($response);
+
+            die;
+        }
+    }
 }
