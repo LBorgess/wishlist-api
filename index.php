@@ -7,6 +7,9 @@ $status = 'Online';
 $data = date_default_timezone_set('America/Sao_Paulo');
 $data = date("d-m-Y H:i:s");
 
+// API
+use App\API\API;
+
 ?>
 
 <!DOCTYPE html>
