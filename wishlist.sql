@@ -6,7 +6,7 @@ CREATE DATABASE wishlist;
 USE wishlist;
 
 -- USUÁRIO
-DROP USER 'etecia'@'localhost';
+DROP USER IF EXISTS 'etecia'@'localhost';
 CREATE USER 'etecia'@'localhost' IDENTIFIED BY 'api@etec.com';
 GRANT ALL ON * . * TO 'etecia'@'localhost';
 FLUSH PRIVILEGES;
