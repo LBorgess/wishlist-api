@@ -26,7 +26,8 @@ INSERT INTO `wishlist` (id, produto, link, preco, categoria)
 VALUES
 (NULL, 'Camiseta', 'amazon.com', '15.00', 'Roupas'),
 (NULL, 'Playstation 5', 'casasbahia.com', '3000.00', 'Jogos'),
-(NULL, 'Fogão', 'pontofrio.com', '1500.00', 'Cozinha');
+(NULL, 'Fogão', 'pontofrio.com', '1500.00', 'Cozinha')
+(NULL, 'Geladeira', 'amazon.com', '1800.00', 'Cozinha');
 
 -- SELECT
 SELECT * FROM wishlist;
